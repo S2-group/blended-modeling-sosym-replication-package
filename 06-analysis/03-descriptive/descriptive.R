@@ -11,7 +11,7 @@ columnsToBeDropped <- c("Motivation")
 
 # set up data
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-data <- read.csv2("../_data/analysis-clean.csv", header = TRUE, quote = "\"", dec = ".", fill = TRUE, comment.char = "", na.strings = c("-", ""))
+data <- read.csv2("../../05-data/data-clean.csv", header = TRUE, quote = "\"", dec = ".", fill = TRUE, comment.char = "", na.strings = c("-", ""))
 data <- data[,1:27]
 data <- data[ , -which(names(data) %in% columnsToBeDropped)]
 

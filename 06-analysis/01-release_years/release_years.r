@@ -5,7 +5,7 @@ library(scales)
 
 # set up data
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-dataRaw <- read.csv2("../_data/analysis-clean.csv", header = TRUE, quote = "\"", dec = ".", fill = TRUE, comment.char = "", na.strings = c("-", ""))
+dataRaw <- read.csv2("../../05-data/data-clean.csv", header = TRUE, quote = "\"", dec = ".", fill = TRUE, comment.char = "", na.strings = c("-", ""))
 
 df <- dataRaw[,c("TID", "Name", "First.release..Year.", "Latest.release..Year.")]
 colnames(df) <- c("TID", "Name", "First.release..Year.", "Latest.release..Year.")
