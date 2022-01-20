@@ -2,7 +2,7 @@ library(ggplot2)
 
 # set up data
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
-data <- read.csv2("../_data/analysis-clean.csv", header = TRUE, quote = "\"", dec = ".", fill = TRUE, comment.char = "", na.strings = c("-", ""))
+data <- read.csv2("../../05-data/data-clean.csv", header = TRUE, quote = "\"", dec = ".", fill = TRUE, comment.char = "", na.strings = c("-", ""))
 colnames(data)[12]<- "Concrete.syntax.instances.count"
 
 for(i in 1:nrow(data)){
