@@ -31,11 +31,12 @@ if(countWhat == "types"){
 }
   
 p<-ggplot(data, aes(x=syntaxcount)) +
-  geom_histogram(color="darkblue", fill="lightblue", binwidth = 1) +
+  #geom_histogram(color="darkblue", fill="lightblue", binwidth = 1) +
+  geom_bar(color="darkblue", fill="lightblue", width = 1, position = position_dodge()) +
   #geom_vline(aes(xintercept=mean(syntaxcount)), color="blue", linetype="dashed", size=1) +
   scale_x_continuous(breaks=seq(min(data$syntaxcount),
                                 max(data$syntaxcount), 1))+
-  stat_bin(binwidth= 1, geom="text", aes(label=..count..) , vjust = 1.5, size=5) +
+  stat_bin(binwidth= 1, geom="text", aes(label=..count..) , vjust = 1.5, size=6) +
   labs(x = paste("Number of syntax ", countWhat, sep = ""), y = "Cases") +
   #geom_text(aes(label=paste(round(mean(syntaxcount),1)," (sd=",round(sd(syntaxcount),1),")",sep=""),
   #              y=0,x=mean(syntaxcount)),
@@ -47,7 +48,7 @@ p<-ggplot(data, aes(x=syntaxcount)) +
   theme(axis.ticks.x = element_blank())
 
 outputFile <- "concreteSyntaxCount.pdf"
-aspect_ratio <- 2.25
+aspect_ratio <- 3
 width <- 3
 pdf(outputFile, width= width, height = width*aspect_ratio)
 
