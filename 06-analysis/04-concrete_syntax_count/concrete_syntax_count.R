@@ -41,7 +41,7 @@ p<-ggplot(data, aes(x=syntaxcount)) +
   #geom_text(aes(label=paste(round(mean(syntaxcount),1)," (sd=",round(sd(syntaxcount),1),")",sep=""),
   #              y=0,x=mean(syntaxcount)),
   #              vjust=-28,col="blue",hjust=-0.3, size=5, fontface = "italic") +
-  theme(axis.text.x = element_text(size = 13, margin = margin(t = -12))) +
+  theme(axis.text.x = element_text(size = 15, margin = margin(t = -25))) +
   theme(axis.text.y = element_text(size = 13)) +
   theme(axis.title = element_text(size = 13)) +
   theme(panel.background = element_rect(fill = 'white', colour = 'white')) +

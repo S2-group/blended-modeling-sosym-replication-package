@@ -238,8 +238,9 @@ createPlot <- function(plotName, var1, var2) {
     labs(title = plotName) +
     theme(plot.title = element_text(color = titleColor, hjust = 0.5))
   
-
-  print(plot)
+  #if(p < 0.10){
+    print(plot)
+  #}
 }
 
 
