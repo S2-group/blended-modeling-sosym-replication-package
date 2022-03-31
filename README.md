@@ -1,5 +1,7 @@
-
 # Blended SLR Replication Package
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6402743.svg)](https://doi.org/10.5281/zenodo.6402743)
+
 Replication package for the paper _Blended Modeling in Commercial and Open-source Model-Driven Software Engineering Tools: A Systematic Study_.
 
 ### Protocol
